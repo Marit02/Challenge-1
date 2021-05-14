@@ -1,0 +1,164 @@
+/* Import om het font later te kunnen gebruiken */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;       
+    background-position: center bottom;
+    background-attachment: fixed;
+}
+
+.header{
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+#start-button {
+    width: 30%;
+    height: 50px;
+    font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+    color: aliceblue;
+    background-color: #002D5A;
+    border-width: 1px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 10ms ease;   
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+#start-button:hover {
+    background-color: rgb(247, 183, 46);
+    border-color: rgb(247, 183, 46);;
+}
+
+.data-type {
+    color: rgb(0, 45, 90);
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    flex:auto;
+    height: 300px;
+    margin: 10px;
+    background-color: rgba(154, 221, 231, 0.301);
+    border-radius: 25px;
+}
+
+.container {
+    margin: 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#progress-bar{
+    width: 1%;
+    background-color: #002D5A;
+    color: antiquewhite;
+    text-align:center;
+} 
+
+#ship-distance{
+    padding-top: 20px
+}
+
+#ship-fuel{
+    padding-top: 20px
+}
+
+#ship-speed{
+    padding-top: 20px
+}
+
+#fuel-chart{
+margin-top: 10px;
+margin-left: 33%;
+margin-right: 33%;
+height: 60%;
+}
+
+#speed-chart{
+    margin: 10px;
+    height: 60%;
+}
+
+/*benaming van de grid-area */
+.journey{
+    grid-area: jurny;
+}
+
+/*benaming van de grid-area */
+.fuel{
+    grid-area: ful;
+}
+
+/*benaming van de grid-area */
+.speed{
+    grid-area: spid;
+}
+
+/*benaming van de grid-area */
+.header{
+    grid-area: hedur;
+}
+
+/* Mobile */
+@media only screen and (min-width: 0px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "hedur"
+            "jurny"
+            "ful"
+            "spid"
+        ;
+    }
+    /* Dit was om het lettertype op mobile goed te krijgen alleen werkt het niet helemaal
+#start-button{
+    font-size: 0.5em;
+}
+*/
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "hedur hedur hedur"
+            "jurny ful spid"
+        ;
+    }
+
+    .bericht,.lijst{
+        width: 60%;
+    }
+
+    .speed{
+        max-width: 20em;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px){
+    .klok,.bericht,.lijst,.heade{
+        color: darkslategrey;
+    }
+    .speed{
+        max-width: 50em;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Marit">
+    <meta name="description" content="This is an interactive Interface for the ITS journey to mars">
+    <meta name="keywords" content="ITS, Mars, Elon Musk">
+    <!-- De Volgende Meta-tag Passen De Verhouding Aan Voor Het Apparaat Dat Wordt Gebruikt -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Scripts-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="code.js"></script>
+    <title>SpaceX Dashboard</title>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <img class="header" src="images/logo.png" alt="Logo">
+        </header>
+
+        <main>
+            <!-- De Button Laat de grafieken beginnen-->
+            <div>
+                <button id="start-button" onclick="main(); ">Start Simulation
+                </button>
+            </div>
+
+            <div class="container">
+                <div class="data-type journey" id="ship-distance">Journey Progress
+                    <div id="progress-bar">
+                    </div> Distance
+                </div>
+                <div class="data-type fuel" id="ship-fuel"> Fuel
+                    <div id="fuel-chart">
+                    </div>
+                </div>
+                <div class="data-type speed" id="ship-speed"> Speed
+                    <div id="speed-chart">
+                    </div>
+                </div>
+        </main>
+    </div>
+</body>
+
+</html>
